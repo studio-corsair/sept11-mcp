@@ -8,8 +8,30 @@
     "sept11-mcp": "dist/index.js"
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "LICENSE"
   ],
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "9/11",
+    "september-11",
+    "public-records",
+    "foia",
+    "nyc",
+    "open-data",
+    "journalism"
+  ],
+  "author": "Jordan Rejaud <jordan@alastor.space> (https://studiocorsair.com)",
+  "homepage": "https://github.com/studio-corsair/sept11-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/studio-corsair/sept11-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/studio-corsair/sept11-mcp/issues"
+  },
   "scripts": {
     "build": "tsc",
     "dev": "tsx src/index.ts",

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<style>
+  @font-face { font-family: 'InterLocal'; src: local('Inter'), local('Helvetica Neue'); }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1600px; height: 900px;
+    background: #09090b;
+    color: #fafafa;
+    font-family: 'Inter', 'InterLocal', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    display: flex; flex-direction: column;
+    padding: 74px 88px 64px;
+    position: relative; overflow: hidden;
+  }
+  /* Faint dust-grey wash from the top-left, so the field isn't flat black. */
+  body::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(1100px 700px at 8% -12%, rgba(148,163,184,0.11), transparent 62%);
+    pointer-events: none;
+  }
+  .eyebrow {
+    font-size: 21px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+    color: #5eead4; margin-bottom: 30px;
+  }
+  h1 {
+    font-size: 86px; line-height: 1.04; font-weight: 800; letter-spacing: -0.033em;
+    max-width: 1240px;
+  }
+  h1 .dim { color: #71717a; }
+  .sub {
+    margin-top: 30px; font-size: 29px; line-height: 1.45; color: #a1a1aa;
+    max-width: 1180px; font-weight: 400;
+  }
+  .sub strong { color: #e4e4e7; font-weight: 600; }
+
+  .flow {
+    margin-top: auto; padding-top: 30px; display: flex; align-items: stretch; gap: 26px;
+  }
+  .node {
+    flex: 1; background: #131316; border: 1px solid #27272a;
+    border-radius: 18px; padding: 30px 32px 32px;
+    display: flex; flex-direction: column;
+  }
+  .node.accent { border-color: rgba(45,212,191,0.45); background: #101a1a; }
+  .node .label {
+    font-size: 17px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase;
+    color: #71717a; margin-bottom: 16px;
+  }
+  .node.accent .label { color: #5eead4; }
+  .node .headline { font-size: 34px; font-weight: 700; letter-spacing: -0.018em; line-height: 1.2; }
+  .node .detail { margin-top: 12px; font-size: 21px; line-height: 1.42; color: #a1a1aa; }
+  .node .tools {
+    margin-top: 15px; display: flex; flex-wrap: wrap; gap: 9px;
+  }
+  .tools code {
+    font-family: 'SF Mono', ui-monospace, Menlo, monospace;
+    font-size: 17.5px; color: #99f6e4;
+    background: rgba(45,212,191,0.11); border: 1px solid rgba(45,212,191,0.24);
+    border-radius: 7px; padding: 5px 11px;
+  }
+  .arrow {
+    align-self: center; color: #3f3f46; font-size: 42px; line-height: 1;
+    flex: 0 0 auto; margin-top: 6px;
+  }
+
+  footer {
+    margin-top: 42px; display: flex; align-items: baseline; justify-content: space-between;
+  }
+  .repo {
+    font-family: 'SF Mono', ui-monospace, Menlo, monospace;
+    font-size: 26px; color: #fafafa;
+  }
+  .repo .slash { color: #52525b; }
+  .byline { font-size: 22px; color: #52525b; }
+</style>
+</head>
+<body>
+  <div class="eyebrow">Open source · MIT</div>
+
+  <h1>170,000 pages the public<br />can search but nobody<span class="dim"> has read.</span></h1>
+
+  <p class="sub">
+    New York City released its internal <strong>9/11 air-quality and health records</strong> in September 2026,
+    after a lawsuit by 9/11 Health Watch. This puts the whole archive behind MCP tools — so an AI agent
+    can search it and read full documents directly.
+  </p>
+
+  <div class="flow">
+    <div class="node">
+      <div class="label">The archive</div>
+      <div class="headline">24,500 documents</div>
+      <div class="detail">DEP memos, dust and air sampling, inspection reports, internal email — already OCR'd to text.</div>
+    </div>
+
+    <div class="arrow">&rarr;</div>
+
+    <div class="node accent">
+      <div class="label">This server</div>
+      <div class="headline">4 MCP tools</div>
+      <div class="tools">
+        <code>search_documents</code>
+        <code>read_document</code>
+        <code>list_agencies</code>
+        <code>corpus_overview</code>
+      </div>
+    </div>
+
+    <div class="arrow">&rarr;</div>
+
+    <div class="node">
+      <div class="label">So you can</div>
+      <div class="headline">Ask the archive</div>
+      <div class="detail">Point Claude at it and have it read what officials knew, when, and what they told people.</div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="repo">github.com<span class="slash">/</span>studio-corsair<span class="slash">/</span>sept11-mcp</div>
+    <div class="byline">Studio Corsair</div>
+  </footer>
+</body>
+</html>

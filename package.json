@@ -1,0 +1,32 @@
+{
+  "name": "sept11-mcp",
+  "version": "0.1.0",
+  "description": "MCP server over the NYC 9/11 Document Portal — search and read the City's released September 11th records (air quality, health, WTC 7) from an AI agent.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "sept11-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "check": "tsc --noEmit",
+    "test": "node --test test/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.26.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.13",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "license": "MIT"
+}
